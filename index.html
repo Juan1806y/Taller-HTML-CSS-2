@@ -3,11 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel de Imágenes</title>
+    <title>Tienda Tilina</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+</style>
 <body>
-
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">Tienda Tilina</div>
+            <div class="location-button">
+                <img src="img/icons/location.svg">
+                <div class="location-text">
+                    <span class="location-label">Enviar a</span>
+                    <span class="location-value">Venezuela</span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <select class="category">
+                <option value="todos">Todos</option>
+                <option value="todos">Técnologia</option>
+                <option value="todos">Ropa</option>
+                <option value="todos">Todos</option>
+                <option value="todos">Electrodomésticos</option>
+            </select>
+            <input type="text" placeholder="Buscar en Tilina">
+            <button class="search-btn"><img src="img/icons/search.svg"></button>
+        </div>
+        <div class="nav-right">
+            <div class="language">ES <i class="fas fa-globe"></i></div>
+            <div class="account">Identifícate <br><strong>Cuenta y Sesión</strong></div>
+            <div class="cart">
+                <img src="img/icons/cart.svg">
+            </div>
+    </header>
+    <main>
+        <section>
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="img/auriculares1.jpg" alt="Producto 1">
+                    <h3>Auriculares Gamer</h3>
+                    <h4>$19.99</h4>
+                    <p>Auriculares mega pro para jugar buscaminas</p>
+                    <button>Comprar</button>
+                </div>
+                
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="img/grafica1.jpg" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <h4>$24.99</h4>
+                <p>Este es un producto increíble que te encantará.</p>
+                <button>Comprar</button>
+            </div>
+    
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="img/monitor1.jpg" alt="Producto 3">
+                <h3>Producto 3</h3>
+                <h4>$15.50</h4>
+                <p>Una opción económica y de buena calidad.</p>
+                <button>Comprar</button>
+            </div>
+    
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="img/teclado1.jpg" alt="Producto 4">
+                <h3>Producto 4</h3>
+                <h4>$29.99</h4>
+                <p>Innovador y con excelentes características.</p>
+                <button>Comprar</button>
+            </div>
+    
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <img src="img/teclado2.jpg" alt="Producto 5">
+                <h3>Producto 5</h3>
+                <h4>$39.99</h4>
+                <p>El mejor en su categoría, ¡No te lo pierdas!</p>
+                <button>Comprar</button>
+            </div>
+    
+        </section>
     <section  class="categoryProductos">
         <h2>Accesorios para juegos</h2>
         <div class="carousel">
@@ -106,6 +185,60 @@
     </div>
 </div>
 </section>
+    </main>
+    <footer class="main-footer">
 
+        <div class="footer-columns">
+
+          <div class="footer-column">
+            <h4>Conócenos</h4>
+            <ul>
+              <li><a href="#">Acerca de nosotros</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Gana Dinero</h4>
+            <ul>
+              <li><a href="#">Vende productos</a></li>
+              <li><a href="#">Programa de afiliados</a></li>
+              <li><a href="#">Publica tu libro</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Métodos de Pago</h4>
+            <ul>
+              <li><a href="#">Tarjetas de crédito</a></li>
+              <li><a href="#">Tarjetas de regalo</a></li>
+              <li><a href="#">Meses sin intereses</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Ayuda</h4>
+            <ul>
+              <li><a href="#">Tu cuenta</a></li>
+              <li><a href="#">Tus pedidos</a></li>
+              <li><a href="#">Devoluciones</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-logo">
+            <p>Tienda Tilina</p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Condiciones de uso</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Ayuda</a>
+          </div>
+          <div class="footer-copyright">
+            <p>© 2023-2025 Tienda Tilina o sus afiliados</p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
