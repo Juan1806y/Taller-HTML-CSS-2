@@ -19,6 +19,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
 
 body {
     
@@ -31,11 +32,13 @@ body {
 
 /* Estilos del carrusel */
 .carousel {
+
     display: flex;
+    align-items: stretch; /* Alinea las tarjetas verticalmente */
+    gap: 20px; /* Espacio consistente entre tarjetas */
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1100px;
-    align-items: center;
     gap: 10px;
     width: 90%;
     margin: auto;
@@ -43,6 +46,12 @@ body {
     overflow-x: auto; /* Habilita el desplazamiento horizontal */
     padding: 10px; /* Reduce el espacio superior e inferior */
     scroll-snap-type: x mandatory; /* Hace que las tarjetas se desplacen de forma fluida */
+    background-color: var(--backgroundCarrusel-color);   
+    margin: 5px auto;
+    padding: 0px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
 }
 
 /* Estilos de cada tarjeta de producto */
@@ -108,7 +117,6 @@ body {
 }
 
 section {
-
     background: rgb(235, 236, 158);
     margin: 20px auto;
     padding: 20px 0;
@@ -155,33 +163,20 @@ section {
 }
 
 .logo {
-
     font-size: 24px;
     font-weight: bold;
     color: #f90;
     margin-right: 20px;
-
     font-family: "IBM Plex Sans", serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
-
 }
 
 .location {
     font-size: 14px;
-}
-
-.nav-center {
-    flex: 1;
-    display: flex;
-    max-width: 600px;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    align-items: stretch;
 }
 
 .category {
@@ -264,194 +259,185 @@ section {
     padding: 30px 0 20px;
     font-size: 14px;
     width: 100%;
-  }
+}
   
-  .footer-columns {
+.footer-columns {
     display: flex;
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     flex-wrap: wrap;
-  }
+}
   
-  .footer-column {
+.footer-column {
     flex: 1;
     min-width: 200px;
     margin-bottom: 20px;
-  }
+}
   
-  .footer-column h4 {
+.footer-column h4 {
     margin-bottom: 15px;
     font-size: 16px;
     font-weight: bold;
-  }
+}
   
-  .footer-column ul {
+.footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
   
-  .footer-column ul li {
+.footer-column ul li {
     margin-bottom: 10px;
-  }
+}
   
-  .footer-column ul li a {
+.footer-column ul li a {
     color: #ddd;
     text-decoration: none;
-  }
+}
   
-  .footer-column ul li a:hover {
+.footer-column ul li a:hover {
     text-decoration: underline;
     color: #fff;
-  }
+}
   
-  /* Bottom footer */
-  .footer-bottom {
+/* Bottom footer */
+.footer-bottom {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #383838;
     text-align: center;
-  }
+}
   
-  .footer-logo {
+.footer-logo {
     margin-bottom: 15px;
-  }
+}
   
-  .footer-logo p {
+.footer-logo p {
     font-size: 18px;
     font-weight: bold;
     color: #f90;
-  }
+}
   
-  .footer-links {
+.footer-links {
     margin-bottom: 15px;
-  }
+}
   
-  .footer-links a {
+.footer-links a {
     color: #ddd;
     margin: 0 10px;
     text-decoration: none;
     font-size: 12px;
-  }
+}
   
-  .footer-links a:hover {
+.footer-links a:hover {
     text-decoration: underline;
-  }
+}
   
-  .footer-copyright {
+.footer-copyright {
     color: #999;
     font-size: 12px;
-  }
+}
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .footer-columns {
-      flex-direction: column;
-    }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+  }
     
-    .footer-column {
-      margin-bottom: 30px;
-      min-width: 100%;
-    }
+  .footer-column {
+    margin-bottom: 30px;
+    min-width: 100%;
+  }
+}
+  
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
   }
   
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 10px;
-    }
-  
-    .nav-left, .nav-center, .nav-right {
-      margin: 5px 0;
-    }
+  .nav-left, .nav-center, .nav-right {
+    margin: 5px 0;
+  }
     
-    .nav-center {
-      order: 3;
-      width: 100%;
-      max-width: 100%;
-      margin: 10px 0;
-    }
-  
+  .nav-center {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
   }
-  
+}
+
 @media (max-width: 576px) {
-    .navbar {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    
-    .nav-left {
-      justify-content: space-between;
-      width: 100%;
-    }
-    
-    .logo {
-      margin-right: 0;
-    }
-    
-    .nav-right {
-      justify-content: space-around;
-      width: 100%;
-      margin-top: 10px;
-    }
-    
-    .nav-center {
-      margin-top: 10px;
-    }
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
   
-    .footer-columns {
-      flex-direction: column;
+  .nav-left {
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logo {
+    margin-right: 0;
+  }
+  
+  .nav-right {
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .nav-center {
+    margin-top: 10px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    min-width: 100%;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+    .carousel {
+        justify-content: space-around;
     }
     
-    .footer-column {
-      min-width: 100%;
-      text-align: center;
+    .product-card {
+        width: calc(33% - 20px); 
+        min-width: 200px;
     }
-    
-    .footer-links a {
-      display: block;
-      margin: 10px 0;
-    }
+}
 
-    @media (max-width: 1200px) {
-        .carousel {
-            justify-content: space-around;
-        }
-        
-        .product-card {
-            width: calc(33% - 20px); 
-            min-width: 200px;
-        }
+@media (max-width: 900px) {
+    .product-card {
+        width: calc(50% - 20px); 
+        min-width: 180px;
     }
+}
 
-    @media (max-width: 900px) {
-        .product-card {
-            width: calc(50% - 20px); 
-            min-width: 180px;
-        }
+@media (max-width: 500px) {
+    .product-card {
+        width: 100%; 
+        max-width: 300px;
     }
-
-    @media (max-width: 500px) {
-        .product-card {
-            width: 100%; 
-            max-width: 300px;
-        }
-    }
-
-    background-color: var(--backgroundCarrusel-color);   
-    margin: 5px auto;
-    padding: 0px;
-    width: 90%;
-    max-width: 900px;
-    border-radius: 20px;
 }
 
 .categoryProductos {
     text-align: left; /* Alineado a la izquierda */
     padding: 10px;
     width: 100%; /* Asegura que ocupe todo el ancho */
-
 }
 
 .categoryProductos h2 {
